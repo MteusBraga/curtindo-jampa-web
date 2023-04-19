@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;700&family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;700&family=Sora:wght@300;400;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.nav{
+
+    background-color: white;
+    border: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo-nav{
+    width: 70px;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.nav-menu-items{
+    color: orange;
+    text-decoration: none;
+    font-family: 'Sora', sans-serif;
+}
+
+
+.nav-search-box{
+    border-radius: 40px;
+    border: 1px solid orange;
+    height: 40px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.input-nav{
+    margin: 0px 10px;
+    font-size: 14px;
+    width: 300px;
+    outline: none;
+    border: none;
+}
+
+.lupa-nav{
+    opacity: 30%;
+    width: 25px;
+    height: 25px;
+}
