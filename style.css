@@ -6,9 +6,7 @@
 }
 
 .nav{
-
     background-color: white;
-    border: 1px solid black;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -21,12 +19,18 @@
 .nav-menu{
     display: flex;
     justify-content: space-between;
-    gap: 30px;
 }
 .nav-menu-items{
     color: orange;
     text-decoration: none;
     font-family: 'Sora', sans-serif;
+    padding: 27px 10px;
+    transition: 0.4s;
+}
+
+.nav-menu-items:hover{
+    color: rgb(156, 102, 0);
+    background-color: rgb(253, 215, 143);
 }
 
 
@@ -53,4 +57,36 @@
     opacity: 30%;
     width: 25px;
     height: 25px;
+}
+
+.intro{
+    background-image: url(img/intro-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    height: 400px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: top;
+}
+/*
+.intro-logo-box{
+    margin-top: 10px;
+    background-image: url(img/logo-full.png);
+    background-repeat: none;
+    background-size: cover;
+
+    width: 370px;
+    height: 156px;
+}
+*/
+
+.intro-logo-box{
+}
+
+.intro-img{
+    margin: 10px 0 0 0;
+    width: 340px;
 }
