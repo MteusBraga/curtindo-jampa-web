@@ -59,8 +59,16 @@
     height: 25px;
 }
 
+.nav-menu.select select{
+    display: none;
+}
+
+.select-selected {
+    background-color: rgb(253, 215, 143);
+}
+
 .intro{
-    background-image: url(img/intro-bg.jpg);
+    background-image: url(img/wallpaper/intro-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
@@ -83,10 +91,107 @@
 }
 */
 
-.intro-logo-box{
-}
 
 .intro-img{
     margin: 10px 0 0 0;
     width: 340px;
+}
+
+.main-container{
+    display: flex;
+    justify-content: center;
+}
+
+.main-viagens{
+    background-color: rgb(255, 255, 255);
+    border-radius: 40px 40px 0px 0px;
+    margin: -235px;
+}
+.main-viagens-title{
+    margin: 50px 0px 0px 50px;
+    color: rgb(150, 98, 1);
+    font-weight: normal;
+    font-family: 'Sora', sans-serif;
+}
+
+.main-viagens-grid{
+    padding: 50px;
+    gap: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-content: space-around;
+
+}
+
+.main-viagens-card{
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.main-viagens-card:hover{
+    transform: scale(1.05);
+}
+
+.main-viagens-card-img{
+    border-radius: 10px 10px 0px 0px;
+    width: 250px;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-viagens-p{
+    text-align: center;
+    width: 250px;
+    padding: 10px 0px;
+    font-family: 'Sora', sans-serif;
+    color: orange;
+    border-radius: 0px 0px 10px 10px;
+    background-color: white;
+    transition: 0.3s;
+}
+
+
+
+.main-viagens-card:hover > .main-viagens-p{
+    color: rgb(156, 102, 0);
+    background-color: rgb(255, 222, 161);
+}
+
+.extremo-oriente{
+    background-image: url(img/cards-img/piscina-natural-seixas.jpg);
+}
+
+.picaozinho{
+    background-image: url(img/cards-img/picaozinho.jpg);
+}
+
+.areia-vermelha{
+    background-image: url(img/cards-img/ilha-areia-vermelha.webp);
+}
+
+.conde1{
+    background-image: url(img/cards-img/praia-litoral-sul-2.jpg);
+}
+
+.conde2{
+    background-image: url(img/cards-img/praia-litoral-sul.jpg);
+}
+
+.tour-jampa{
+    background-image: url(img/cards-img/farol-cabo-branco.jpg);
+}
+
+@media(max-width:970px){
+    .nav-menu{
+        display: none;
+    }
+    .nav-search-box{
+        display: none;
+    }
+    .main-viagens-grid{
+        grid-template-columns: auto auto;
+    }
 }
