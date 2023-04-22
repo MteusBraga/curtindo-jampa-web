@@ -1,43 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;400;700&family=Montserrat:wght@300;400;700&family=Roboto:wght@300;400;700&family=Sora:wght@300;400;700&display=swap');
 
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
-.nav{
+.nav {
+    border-bottom: 1px solid #b1b1b1;
     background-color: white;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-.logo-nav{
+.logo-nav {
     width: 70px;
 }
 
-.nav-menu{
+.nav-menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
-.nav-menu-items{
+
+
+.nav-menu-items {
+    position: relative;
     color: orange;
     text-decoration: none;
     font-family: 'Sora', sans-serif;
-    padding: 27px 10px;
-    transition: 0.4s;
+    margin: 27px 10px;
+
 }
 
-.nav-menu-items:hover{
-    color: rgb(156, 102, 0);
-    background-color: rgb(253, 215, 143);
+.nav-menu-items::after {
+    content: " ";
+    width: 0%;
+    height: 4px;
+    background-color: rgb(255, 208, 122);
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    transition: 0.3s ease-in-out;
 }
 
+.nav-menu-items:hover::after {
+    width: 100%;
+}
 
-.nav-search-box{
+.nav-search-box {
     border-radius: 40px;
     border: 1px solid orange;
-    height: 40px;
+    height: 35px;
     padding: 5px;
     display: flex;
     justify-content: space-between;
@@ -45,153 +58,299 @@
     background-color: white;
 }
 
-.input-nav{
+.input-nav {
     margin: 0px 10px;
     font-size: 14px;
-    width: 300px;
+    max-width: 300px;
     outline: none;
     border: none;
 }
 
-.lupa-nav{
+.lupa-nav {
     opacity: 30%;
     width: 25px;
     height: 25px;
 }
 
-.nav-menu.select select{
-    display: none;
-}
-
-.select-selected {
-    background-color: rgb(253, 215, 143);
-}
-
-.intro{
-    background-image: url(img/wallpaper/intro-bg.jpg);
+.intro {
+    background-image: url(img/wallpaper/intro-bg-3.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: bottom;
 
-    height: 400px;
-    
+    height: 350px;
+
     display: flex;
     justify-content: center;
-    align-items: top;
+    align-items: center;
+    flex-direction: column;
 }
-/*
-.intro-logo-box{
-    margin-top: 10px;
-    background-image: url(img/logo-full.png);
-    background-repeat: none;
-    background-size: cover;
 
-    width: 370px;
-    height: 156px;
-}
-*/
-
-
-.intro-img{
+.intro-img {
     margin: 10px 0 0 0;
     width: 340px;
 }
 
-.main-container{
+.flex-center {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
-.main-viagens{
-    background-color: rgb(255, 255, 255);
-    border-radius: 40px 40px 0px 0px;
-    margin: -235px;
-}
-.main-viagens-title{
-    margin: 50px 0px 0px 50px;
-    color: rgb(150, 98, 1);
-    font-weight: normal;
-    font-family: 'Sora', sans-serif;
+.title {
+    margin: 40px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5em;
 }
 
-.main-viagens-grid{
-    padding: 50px;
-    gap: 50px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    align-content: space-around;
-
+.color-light {
+    color: orange;
 }
 
-.main-viagens-card{
+.color-dark {
+    color: #48191B;
+}
+
+.bg-color-dark {
+    background-color: #48191B;
+}
+
+.card-box {
+    margin-bottom: 60px;
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    width: 200px;
+    height: 300px;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 7px 7px 7px 7px;
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+
 }
 
-.main-viagens-card:hover{
-    transform: scale(1.05);
-}
-
-.main-viagens-card-img{
-    border-radius: 10px 10px 0px 0px;
-    width: 250px;
-    height: 250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.main-viagens-p{
+.card p {
+    max-width: 200px;
+    overflow: hidden;
+    border-radius: 0px 0px 7px 7px;
+    border: 1px solid #d1d1d1;
     text-align: center;
-    width: 250px;
-    padding: 10px 0px;
-    font-family: 'Sora', sans-serif;
+    padding: 25px 0px;
+    font-size: 1.2em;
+    font-family: 'Montserrat';
     color: orange;
-    border-radius: 0px 0px 10px 10px;
-    background-color: white;
+    transition: all 0.3s;
+}
+
+.card:hover img,
+.card:hover p {
+    transform: scale(1.1);
+
+}
+
+.card:hover p {
+    background-color: rgb(253, 215, 143);
+    color: rgb(100, 65, 0);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex img {
+    max-width: 300px;
+    margin-bottom: 40px;
+}
+
+.flex-p {
+    max-width: 670px;
+    margin: 0px 30px;
+    font-family: 'Sora';
+    font-size: 1.2em;
+}
+
+
+.back-to-top {
+    text-decoration: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    width: 2.5rem;
+    height: 2.5rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    color: black;
+    transform: rotate(-90deg);
+    border: 0.1rem solid #ccc;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.img {
+
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    max-height: 400px;
+    object-fit: cover;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.img:hover {
+    transform: translate(-3%, 3%) scale(1.2) rotate(5deg);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 40px;
+    margin: 0px 40px;
+    margin-bottom: 50px;
+}
+
+.contato{
+    border: 1px solid black;
+
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 40px;
+}
+
+.whatsapp img{
+    max-width: 300px;
+    margin: 40px 0;
+}
+.bi-whatsapp{
+    margin: 40px 0;
+}
+
+.whatsapp{
+    border: 1px solid black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.bi-envelope{
+    width: 80px;
+    height: 80px;
+    margin: 70px 0;
+}
+
+.email{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    border: 1px solid black;
+    width: 100%;
+    max-width: 600px;
+}
+.inputBox{
+    position: relative;
+}
+.inputUser{
+    background: none;
+    border: none;
+    border-bottom: 1px solid orange;
+    outline: none;
+    width: 100%;
+    color: white;
+    font-size: 1em;
+}
+.inputUser:focus ~ .labelInput, 
+.inputUser:valid ~ .labelInput{
+    color: rgb(167, 108, 0);
+    top: -20px;
+    font-size: 12px;
+}
+
+.labelInput{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: none;
     transition: 0.3s;
 }
 
-
-
-.main-viagens-card:hover > .main-viagens-p{
-    color: rgb(156, 102, 0);
-    background-color: rgb(255, 222, 161);
+#submit{
+    font-family: 'Sora';
+    width: 100%;
+    padding: 5px;
+    color: #48191B;
+    font-size: 1em;
+    outline: none;
+    border: none;
+    margin: 10px 0px;
+    border-radius: 5px;
+    background-color: rgb(255, 208, 121);
 }
 
-.extremo-oriente{
-    background-image: url(img/cards-img/piscina-natural-seixas.jpg);
-}
-
-.picaozinho{
-    background-image: url(img/cards-img/picaozinho.jpg);
-}
-
-.areia-vermelha{
-    background-image: url(img/cards-img/ilha-areia-vermelha.webp);
-}
-
-.conde1{
-    background-image: url(img/cards-img/praia-litoral-sul-2.jpg);
-}
-
-.conde2{
-    background-image: url(img/cards-img/praia-litoral-sul.jpg);
-}
-
-.tour-jampa{
-    background-image: url(img/cards-img/farol-cabo-branco.jpg);
-}
-
-@media(max-width:970px){
-    .nav-menu{
+@media(max-width:850px) {
+    .nav-menu {
         display: none;
     }
-    .nav-search-box{
+
+    .nav-search-box {
         display: none;
     }
-    .main-viagens-grid{
+
+    .main-viagens-grid {
         grid-template-columns: auto auto;
     }
+}
+
+@media(max-width:700px) {
+    .flex {
+        flex-direction: column;
+    }
+
+    .flex img {
+        margin: 30px 0px;
+        width: 200px;
+    }
+}
+
+.menu-mobile {
+    display: none;
 }
