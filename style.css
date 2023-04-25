@@ -239,93 +239,6 @@
     margin-bottom: 50px;
 }
 
-.contato{
-    border: 1px solid black;
-
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-
-    gap: 40px;
-}
-
-.whatsapp img{
-    max-width: 300px;
-    margin: 40px 0;
-}
-.bi-whatsapp{
-    margin: 40px 0;
-}
-
-.whatsapp{
-    border: 1px solid black;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.bi-envelope{
-    width: 80px;
-    height: 80px;
-    margin: 70px 0;
-}
-
-.email{
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.form{
-    border: 1px solid black;
-    width: 100%;
-    max-width: 600px;
-}
-.inputBox{
-    position: relative;
-}
-.inputUser{
-    background: none;
-    border: none;
-    border-bottom: 1px solid orange;
-    outline: none;
-    width: 100%;
-    color: white;
-    font-size: 1em;
-}
-.inputUser:focus ~ .labelInput, 
-.inputUser:valid ~ .labelInput{
-    color: rgb(167, 108, 0);
-    top: -20px;
-    font-size: 12px;
-}
-
-.labelInput{
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    pointer-events: none;
-    transition: 0.3s;
-}
-
-#submit{
-    font-family: 'Sora';
-    width: 100%;
-    padding: 5px;
-    color: #48191B;
-    font-size: 1em;
-    outline: none;
-    border: none;
-    margin: 10px 0px;
-    border-radius: 5px;
-    background-color: rgb(255, 208, 121);
-}
-
 @media(max-width:850px) {
     .nav-menu {
         display: none;
@@ -353,4 +266,91 @@
 
 .menu-mobile {
     display: none;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+
+.whatsapp, .email{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px;
+    gap: 20px;
+}
+
+.whatss, .mail{
+    display: flex;
+    align-items: center;
+}
+svg{
+    margin: 20px;
+}
+
+.form{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid rgb(122, 34, 10);
+    display: flex;
+    flex-direction: column;
+
+    max-width: 600px;
+}
+
+.label-email{
+    outline: none;
+    font-size: 1.1em;
+}
+.input-email{
+    border: none;
+    outline: none;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.btn{
+    padding: 10px;
+    font-weight: bold;
+    color: rgb(187, 121, 0);
+    font-size: 1.1em;
+    background-color: rgb(253, 208, 124);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.btn:hover{
+    background-color: rgb(187, 121, 0);
+    color: rgb(253, 208, 124);
+}
+
+.link-whats{
+    color: inherit;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+@media (max-width:940px){
+    .flex{
+        display: block;
+        flex-direction: column;
+        
+    }
+    .whatss{
+        margin-bottom: 50px;
+    }
+
+}
+
+.contato{
+    color: orange;
+    font-family: 'Sora';
 }
