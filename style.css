@@ -3,6 +3,7 @@
 * {
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
 }
 
 .nav {
@@ -91,6 +92,8 @@
     width: 340px;
 }
 
+
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -105,6 +108,49 @@
     font-size: 2.5em;
 }
 
+.container{
+    position: relative;
+    padding: 15px;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.card{
+    padding: 10px;
+    border-radius: 10px;
+    font-family: 'Sora';
+    border: 1px solid #dddddd;
+
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+}
+.card button{
+    background-color: turquoise;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1.1em;
+    border-radius: 10px;
+    max-width: 100px;
+    transition: all 0.5s ease-in-out;
+}
+
+.card button:hover{
+    background-color: rgb(39, 138, 128);
+    cursor: pointer;
+}
+.card p{
+    padding: 10px 0;
+    font-weight: bold;
+}
+
 .color-light {
     color: orange;
 }
@@ -115,63 +161,6 @@
 
 .bg-color-dark {
     background-color: #48191B;
-}
-
-.card-box {
-    margin-bottom: 60px;
-    max-width: 1000px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.card-img {
-    width: 100%;
-    height: 100%;
-    width: 200px;
-    height: 300px;
-
-    object-fit: cover;
-    object-position: center;
-
-    transition: all 0.3s ease-in-out;
-}
-
-.card {
-    overflow: hidden;
-    border-radius: 7px 7px 7px 7px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
-
-}
-
-.card p {
-    max-width: 200px;
-    overflow: hidden;
-    border-radius: 0px 0px 7px 7px;
-    border: 1px solid #d1d1d1;
-    text-align: center;
-    padding: 25px 0px;
-    font-size: 1.2em;
-    font-family: 'Montserrat';
-    color: orange;
-    transition: all 0.3s;
-}
-
-.card:hover img,
-.card:hover p {
-    transform: scale(1.1);
-
-}
-
-.card:hover p {
-    background-color: rgb(253, 215, 143);
-    color: rgb(100, 65, 0);
 }
 
 .flex {
